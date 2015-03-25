@@ -18,7 +18,8 @@ $footer = (Get-Content "C:\Program Files (x86)\BingSearchBot\BingCredits.txt")[7
 $footer = $footer.TrimStart("Time=")
 
 $body = $header,$accounts,$footer
-$body = $body.replace(', ','/')
+$body = $body.replace(', ','--')
+$body = $body.replace('/','--')
 
 ###send the Pushover notifications####
 
